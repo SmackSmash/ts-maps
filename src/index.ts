@@ -7,7 +7,14 @@ const newUser = new User(faker.person.firstName(), faker.person.lastName(), {
   long: faker.location.longitude()
 });
 
-const newCompany = new Company(faker.company.name());
+const newCompany = new Company(
+  faker.company.name(),
+  faker.company.catchPhrase(),
+  {
+    lat: faker.location.latitude(),
+    long: faker.location.longitude()
+  }
+);
 
 console.log(newUser.getFullName());
 console.log(newCompany);

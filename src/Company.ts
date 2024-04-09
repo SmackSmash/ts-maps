@@ -1,3 +1,7 @@
 export class Company {
-  constructor(public name: string) {}
+  constructor(
+    public name: string,
+    public catchPhrase: string,
+    location: { lat: number; long: number }
+  ) {}
 }
