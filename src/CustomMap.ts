@@ -1,7 +1,7 @@
 import L from 'leaflet';
 
 export class CustomMap {
-  leafletMap: L.Map;
+  private leafletMap: L.Map;
 
   constructor() {
     this.leafletMap = L.map('map', {
