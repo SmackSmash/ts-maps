@@ -38,16 +38,6 @@ L.tileLayer(
   }
 ).addTo(map);
 
-L.circle([faker.location.latitude(), faker.location.longitude()], {
-  color: 'red',
-  fillColor: '#f03',
-  fillOpacity: 0.5,
-  radius: 50000
-}).addTo(map);
+L.marker([newUser.location.lat, newUser.location.long]).addTo(map);
 
-L.circle([faker.location.latitude(), faker.location.longitude()], {
-  color: 'red',
-  fillColor: '#f03',
-  fillOpacity: 0.5,
-  radius: 50000
-}).addTo(map);
+L.marker([newCompany.location.lat, newCompany.location.long]).addTo(map);
