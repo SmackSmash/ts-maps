@@ -3,8 +3,8 @@ import L from 'leaflet';
 export class CustomMap {
   private leafletMap: L.Map;
 
-  constructor() {
-    this.leafletMap = L.map('map', {
+  constructor(elementId: string) {
+    this.leafletMap = L.map(elementId, {
       center: L.latLng(0, 0),
       zoom: 3
     });
