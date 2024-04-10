@@ -1,6 +1,11 @@
 import L from 'leaflet';
-import { User } from './User';
-import { Company } from './Company';
+
+interface Mappable {
+  location: {
+    lat: number;
+    long: number;
+  };
+}
 
 export class CustomMap {
   private leafletMap: L.Map;
@@ -26,7 +31,7 @@ export class CustomMap {
     ).addTo(this.leafletMap);
   }
 
-  public addMarker(mappable: User | Company): void {
+  public addMarker(mappable: Mappable): void {
     L.marker([mappable.location.lat, mappable.location.long]).addTo(
       this.leafletMap
     );
