@@ -19,5 +19,5 @@ const newCompany = new Company(
 );
 
 const map = new CustomMap('map');
-map.addMarker(newUser.location);
-map.addMarker(newCompany.location);
+map.addMarker(newUser);
+map.addMarker(newCompany);

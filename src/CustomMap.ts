@@ -1,4 +1,6 @@
 import L from 'leaflet';
+import { User } from './User';
+import { Company } from './Company';
 
 export class CustomMap {
   private leafletMap: L.Map;
@@ -24,7 +26,7 @@ export class CustomMap {
     ).addTo(this.leafletMap);
   }
 
-  public addMarker({ lat, long }: { lat: number; long: number }) {
-    L.marker([lat, long]).addTo(this.leafletMap);
+  private addMarker(user: User | Company) {
+    L.marker([user.location.lat, user.location.long]).addTo(this.leafletMap);
   }
 }
