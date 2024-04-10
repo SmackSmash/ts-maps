@@ -1,4 +1,3 @@
-import { CustomMap } from './CustomMap';
 import L from 'leaflet';
 
 export class CustomMap {
