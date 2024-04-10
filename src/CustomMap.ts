@@ -26,7 +26,7 @@ export class CustomMap {
     ).addTo(this.leafletMap);
   }
 
-  private addMarker(user: User | Company) {
+  public addMarker(user: User | Company) {
     L.marker([user.location.lat, user.location.long]).addTo(this.leafletMap);
   }
 }
