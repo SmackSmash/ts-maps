@@ -18,9 +18,6 @@ const newCompany = new Company(
   }
 );
 
-console.log(newUser.getFullName());
-console.log(newCompany);
-
 const map = L.map('map', {
   center: L.latLng(0, 0),
   zoom: 3
