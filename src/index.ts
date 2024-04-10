@@ -38,6 +38,10 @@ L.tileLayer(
   }
 ).addTo(map);
 
-L.marker([newUser.location.lat, newUser.location.long]).addTo(map);
+L.marker([newUser.location.lat, newUser.location.long], {
+  title: newUser.getFullName()
+}).addTo(map);
 
-L.marker([newCompany.location.lat, newCompany.location.long]).addTo(map);
+L.marker([newCompany.location.lat, newCompany.location.long], {
+  title: newCompany.name
+}).addTo(map);
