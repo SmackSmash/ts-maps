@@ -1,3 +1,4 @@
+import { CustomMap } from './CustomMap';
 import L from 'leaflet';
 
 export class CustomMap {
@@ -14,7 +15,6 @@ export class CustomMap {
     L.tileLayer(
       `https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}.png?key=${key}`,
       {
-        //style URL
         tileSize: 512,
         zoomOffset: -1,
         minZoom: 1,
@@ -23,13 +23,9 @@ export class CustomMap {
         crossOrigin: true
       }
     ).addTo(this.leafletMap);
+  }
 
-    // L.marker([newUser.location.lat, newUser.location.long], {
-    //   title: newUser.getFullName()
-    // }).addTo(map);
-
-    // L.marker([newCompany.location.lat, newCompany.location.long], {
-    //   title: newCompany.name
-    // }).addTo(map);
+  public addMarker({ lat, long }: { lat: number; long: number }) {
+    L.marker([lat, long]).addTo(this.leafletMap);
   }
 }
