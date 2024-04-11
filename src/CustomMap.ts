@@ -32,8 +32,8 @@ export class CustomMap {
   }
 
   public addMarker(mappable: Mappable): void {
-    L.marker([mappable.location.lat, mappable.location.long]).addTo(
-      this.leafletMap
-    );
+    L.marker([mappable.location.lat, mappable.location.long])
+      .addTo(this.leafletMap)
+      .bindPopup('This is some information about the marker');
   }
 }
