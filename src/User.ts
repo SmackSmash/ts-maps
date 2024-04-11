@@ -1,4 +1,6 @@
-export class User {
+import { Mappable } from './CustomMap';
+
+export class User implements Mappable {
   constructor(
     public firstName: string,
     public lastName: string,

@@ -1,4 +1,6 @@
-export class Company {
+import { Mappable } from './CustomMap';
+
+export class Company implements Mappable {
   constructor(
     public name: string,
     public catchPhrase: string,

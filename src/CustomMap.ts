@@ -1,6 +1,6 @@
 import L from 'leaflet';
 
-interface Mappable {
+export interface Mappable {
   location: {
     lat: number;
     long: number;
