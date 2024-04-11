@@ -4,4 +4,8 @@ export class Company {
     public catchPhrase: string,
     public location: { lat: number; long: number }
   ) {}
+
+  public markerContent() {
+    return `<h1>${this.name}</h1><p>${this.catchPhrase}</p>`;
+  }
 }

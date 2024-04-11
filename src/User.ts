@@ -5,7 +5,7 @@ export class User {
     public location: { lat: number; long: number }
   ) {}
 
-  public getFullName(): string {
-    return `${this.firstName} ${this.lastName}`;
+  public markerContent(): string {
+    return `<h1>${this.firstName} ${this.lastName}</h1>`;
   }
 }

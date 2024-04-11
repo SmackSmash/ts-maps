@@ -5,6 +5,7 @@ interface Mappable {
     lat: number;
     long: number;
   };
+  markerContent(): string;
 }
 
 export class CustomMap {
@@ -34,8 +35,6 @@ export class CustomMap {
   public addMarker(mappable: Mappable): void {
     L.marker([mappable.location.lat, mappable.location.long])
       .addTo(this.leafletMap)
-      .bindPopup(
-        '<h1>Hello there!</h1><p>This is some information about the marker</p>'
-      );
+      .bindPopup(mappable.markerContent());
   }
 }
